@@ -1,4 +1,13 @@
 services:
+  clickhouse:
+    image: docker.io/bitnami/clickhouse:25
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "8123:8123"
+    volumes:
+      - ./clickhouse_data:/bitnami/clickhouse
+
   kafka:
     image: apache/kafka:3.8.0
     container_name: kafka
