@@ -9,7 +9,7 @@ let ConfirmedTransactionType: protobuf.Type | null = null;
 let TransactionType: protobuf.Type | null = null;
 
 // load protobuf schema
-export const loadProtobufScema = async (): Promise<void> => {
+export const loadProtobufShcema = async (): Promise<void> => {
     try {
         const root = await protobuf.load(
             path.join(__dirname, "../../message.proto")

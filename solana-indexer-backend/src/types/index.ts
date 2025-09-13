@@ -1,5 +1,5 @@
 export interface DecodedMessage {
-    type: String,
+    type: string,
     data: any
 }
 
