@@ -10,7 +10,8 @@ export const consumer: Consumer = kafka.consumer({
     groupId: "express-consumer-group"
 })
 
-// kafka consumer setup
+// kafka consumer setup.
+// messageHandler - function passed as an argument to a consumer.
 export const runConsumer = async (
     messageHandler: (message: MessageData) => Promise<void>): Promise<void> => {
     try {
