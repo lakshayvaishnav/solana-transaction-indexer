@@ -59,7 +59,7 @@ export const clearBlocksTable = async (): Promise<void> => {
         await client.exec({
             query: "TRUNCATE TABLE blocks"
         })
-        console.log("Clickhouse blokcs table cleared");
+        console.log("Clickhouse blocks table cleared");
     } catch (error) {
         console.error("error clearing clickhouse blocks table : ", error);
     }
