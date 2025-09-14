@@ -12,7 +12,7 @@ let TransactionType: protobuf.Type | null = null;
 export const loadProtobufShcema = async (): Promise<void> => {
     try {
         const root = await protobuf.load(
-            path.join(__dirname, "../../message.proto")
+            path.join(__dirname, "../../proto/solana-storage.proto")
         );
 
         ConfirmedBlockType = root.lookupType("solana.storage.ConfirmedBlock.ConfirmedBlock");
