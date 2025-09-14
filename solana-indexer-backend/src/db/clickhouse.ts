@@ -17,17 +17,16 @@ export const initializeClickhouseTable = async (): Promise<void> => {
             CREATE TABLE IF NOT EXISTS blocks (
             timestamp DateTime64(3),
             topic String,
-            partition Uint32
+            partition Uint32,
             offset String,
             message_type String,
             decoded_data String,
             is_protobuf Bool,
-            decode_success Bool,
+            decode_success Bool
             )
-            ENGINE = MergeTree(0
+            ENGINE = MergeTree()
             ORDER BY (timestamp , topic , partition , offset)
-            )
-            `
+            `,
         });
 
         console.log("clickhouse blocks table initialized successfully")
