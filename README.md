@@ -31,6 +31,8 @@ This repository indexes Solana slots and transactions from a local validator int
 2) `yellowstone-grpc-kafka` subscribes to the gRPC stream and publishes messages to Kafka topic `grpc1`.
 3) `solana-indexer-backend` consumes `grpc1`, decodes messages using `proto/solana-storage.proto` and stores them as rows in ClickHouse table `blocks`.
 
+![Architecture](./architecture.png)
+
 ### Getting started
 
 1) Start infra (ClickHouse + Kafka)
